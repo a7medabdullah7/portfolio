@@ -51,7 +51,7 @@ export default function About() {
             {/* Bio */}
             <div className="text-gray-400 leading-relaxed space-y-4">
               <p>
-                I'm an <span className="text-white font-semibold">AI Engineer</span> 
+                I'm an <span className="text-white font-semibold">AI Engineer</span>
                 specializing in Machine Learning, Deep Learning, and Computer Vision.
                 I build intelligent systems that transform data into real-world impact.
               </p>
@@ -88,12 +88,12 @@ export default function About() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative border-l border-accent-cyan/30 pl-6 space-y-10"
+            className="relative border-l border-accent-cyan/30 pl-10 space-y-10"
           >
 
             {/* Experience 1 */}
             <div className="relative">
-              <div className="absolute -left-[13px] top-1 w-4 h-4 bg-accent-cyan rounded-full"></div>
+              <div className="absolute -left-[18px] top-1 w-4 h-4 bg-accent-cyan rounded-full shadow-md shadow-accent-cyan/40"></div>
               <h4 className="text-white font-semibold">
                 AI Projects Developer
               </h4>
@@ -108,7 +108,7 @@ export default function About() {
 
             {/* Experience 2 */}
             <div className="relative">
-              <div className="absolute -left-[13px] top-1 w-4 h-4 bg-accent-cyan rounded-full"></div>
+              <div className="absolute -left-[18px] top-1 w-4 h-4 bg-accent-cyan rounded-full shadow-md shadow-accent-cyan/40"></div>
               <h4 className="text-white font-semibold">
                 Machine Learning Enthusiast
               </h4>
