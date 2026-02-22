@@ -17,12 +17,21 @@ const projects = [
   },
   {
     id: "rag-support",
-    title: "RAG Support System",
+    title: "Explainable RAG Support System",
     description:
-      "AI-powered Retrieval-Augmented Generation support assistant combining vector search with LLMs.",
-    technologies: ["Python", "LangChain", "FAISS", "LLM"],
+      "Built an Explainable Retrieval-Augmented Generation (RAG) technical support system combining semantic vector search with LLM-powered response generation. Implemented FAISS indexing, LangChain orchestration, and explainability components for transparent and traceable AI assistance.",
+    technologies: [
+      "Python",
+      "NLP",
+      "RAG",
+      "LLM",
+      "LangChain",
+      "FAISS",
+      "Explainable AI",
+    ],
     image: "/images/rag-support-system.jpg",
-    github: "#", // هنعدلها لما ترفع الريبو
+    github:
+      "https://github.com/a7medabdullah7/Explainable-RAG-Technical-Support-System",
   },
   {
     id: "classification",
@@ -31,7 +40,7 @@ const projects = [
       "Deep learning CNN model for image recognition using TensorFlow.",
     technologies: ["Python", "TensorFlow", "CNN"],
     image: "/images/classification.jpg",
-    github: "#", // هنعدلها لما ترفع الريبو
+    github: "#",
   },
 ];
 
@@ -66,7 +75,11 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden bg-dark-800 border border-white/5 hover:border-accent-cyan/40 transition-all duration-500"
+              className={`rounded-2xl overflow-hidden bg-dark-800 transition-all duration-500 ${
+                project.id === "rag-support"
+                  ? "border border-accent-cyan/40 shadow-lg shadow-accent-cyan/20"
+                  : "border border-white/5 hover:border-accent-cyan/40"
+              }`}
             >
               <div className="relative h-56 overflow-hidden">
                 <Image
@@ -78,6 +91,13 @@ export default function Projects() {
               </div>
 
               <div className="p-6">
+
+                {project.id === "rag-support" && (
+                  <span className="inline-block mb-3 px-3 py-1 text-xs font-mono rounded-full bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30">
+                    ⭐ Featured Project
+                  </span>
+                )}
+
                 <h3 className="text-lg font-semibold text-white mb-3">
                   {project.title}
                 </h3>
@@ -102,12 +122,17 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-cyan/10 text-accent-cyan text-sm font-medium hover:bg-accent-cyan hover:text-black transition-all duration-300"
+                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      project.id === "rag-support"
+                        ? "bg-accent-cyan text-black hover:scale-105"
+                        : "bg-accent-cyan/10 text-accent-cyan hover:bg-accent-cyan hover:text-black"
+                    }`}
                   >
                     <Github size={16} />
                     View on GitHub
                   </a>
                 )}
+
               </div>
             </motion.div>
           ))}
