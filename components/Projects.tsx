@@ -89,10 +89,10 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className={`rounded-2xl overflow-hidden bg-dark-800 transition-all duration-500 ${
+              className={`rounded-2xl overflow-hidden bg-dark-800 border transition-all duration-500 ${
                 project.id === "rag-support"
-                  ? "border border-accent-cyan/40 shadow-lg shadow-accent-cyan/20"
-                  : "border border-white/5 hover:border-accent-cyan/40"
+                  ? "border-accent-cyan/40 shadow-lg shadow-accent-cyan/20"
+                  : "border-white/5 hover:border-accent-cyan/40"
               }`}
             >
               <div className="relative h-56 overflow-hidden">
@@ -136,11 +136,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                      project.id === "rag-support"
-                        ? "bg-accent-cyan text-black hover:scale-105"
-                        : "bg-accent-cyan/10 text-accent-cyan hover:bg-accent-cyan hover:text-black"
-                    }`}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-cyan/10 text-accent-cyan text-sm font-medium hover:bg-accent-cyan hover:text-black transition-all duration-300"
                   >
                     <Github size={16} />
                     View on GitHub
