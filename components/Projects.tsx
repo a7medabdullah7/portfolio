@@ -9,8 +9,15 @@ const projects = [
     id: "smartanpr",
     title: "SmartANPR System",
     description:
-      "Real-time Automatic Number Plate Recognition system using YOLO object detection and OCR pipeline. Detects vehicles, extracts license plates, and enables intelligent traffic monitoring.",
-    technologies: ["Python", "YOLOv8", "OpenCV", "Deep Learning", "OCR"],
+      "Real-time Automatic Number Plate Recognition system using YOLOv8 object detection and OCR pipeline. Detects vehicles, localizes license plates, and enables intelligent traffic monitoring with high accuracy.",
+    technologies: [
+      "Python",
+      "YOLOv8",
+      "OpenCV",
+      "Deep Learning",
+      "Computer Vision",
+      "OCR",
+    ],
     image: "/images/smartanpr.jpg",
     github:
       "https://github.com/a7medabdullah7/-From-Detection-to-Decision-SmartANPR-System",
@@ -35,10 +42,17 @@ const projects = [
   },
   {
     id: "classification",
-    title: "Image Classification",
+    title: "Image Classification System",
     description:
-      "Deep learning CNN model for image recognition using TensorFlow.",
-    technologies: ["Python", "TensorFlow", "CNN"],
+      "Developed a deep learning-based image classification system using Convolutional Neural Networks (CNNs). Implemented data preprocessing, data augmentation, and model optimization techniques to improve accuracy and generalization. Trained and evaluated the model using TensorFlow with detailed performance analysis.",
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "CNN",
+      "Deep Learning",
+      "Computer Vision",
+      "Data Augmentation",
+    ],
     image: "/images/classification.jpg",
     github: "#",
   },
