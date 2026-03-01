@@ -6,6 +6,23 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
+    id: "ai-car-advisor",
+    title: "AI Car Advisor",
+    description:
+      "AI-powered Arabic NLP application that understands user intent and generates structured fuel-efficient car recommendations. Designed as a real-world intelligent assistant using natural language processing and interactive UI.",
+    technologies: [
+      "Python",
+      "NLP",
+      "Streamlit",
+      "Pandas",
+      "Arabic NLP",
+      "Recommendation System",
+    ],
+    image: "/images/ai-car-advisor.jpg",
+    github:
+      "https://github.com/a7medabdullah7/ai-car-advisor-arabic-nlp",
+  },
+  {
     id: "smartanpr",
     title: "SmartANPR System",
     description:
@@ -44,7 +61,7 @@ const projects = [
     id: "classification",
     title: "Image Classification System",
     description:
-      "Developed a deep learning-based image classification system using Convolutional Neural Networks (CNNs). Implemented data preprocessing, data augmentation, and model optimization techniques to improve accuracy and generalization. Trained and evaluated the model using TensorFlow with detailed performance analysis.",
+      "Developed a deep learning-based image classification system using Convolutional Neural Networks (CNNs). Implemented data preprocessing, data augmentation, and model optimization techniques to improve accuracy and generalization.",
     technologies: [
       "Python",
       "TensorFlow",
@@ -90,8 +107,8 @@ export default function Projects() {
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
               className={`rounded-2xl overflow-hidden bg-dark-800 border transition-all duration-500 ${
-                project.id === "rag-support"
-                  ? "border-accent-cyan/40 shadow-lg shadow-accent-cyan/20"
+                project.id === "ai-car-advisor"
+                  ? "border-accent-cyan/50 shadow-xl shadow-accent-cyan/30 scale-105"
                   : "border-white/5 hover:border-accent-cyan/40"
               }`}
             >
@@ -106,7 +123,7 @@ export default function Projects() {
 
               <div className="p-6">
 
-                {project.id === "rag-support" && (
+                {project.id === "ai-car-advisor" && (
                   <span className="inline-block mb-3 px-3 py-1 text-xs font-mono rounded-full bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30">
                     ⭐ Featured Project
                   </span>
