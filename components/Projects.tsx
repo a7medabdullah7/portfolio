@@ -57,6 +57,26 @@ const projects = [
     github:
       "https://github.com/a7medabdullah7/Explainable-RAG-Technical-Support-System",
   },
+
+  // 🔥 NEW PROJECT ADDED
+  {
+    id: "ai-support-system",
+    title: "AI Customer Support System",
+    description:
+      "AI-powered customer support automation system that reads emails from Gmail, classifies issues, analyzes sentiment, assigns priority, and generates professional replies using LLMs. Designed to reduce workload and improve response time for businesses.",
+    technologies: [
+      "Python",
+      "Streamlit",
+      "LLM",
+      "Gmail API",
+      "Automation",
+      "NLP",
+    ],
+    image: "/images/ai-customer-support-dashboard.png",
+    github:
+      "https://github.com/a7medabdullah7/ai-customer-support-system",
+  },
+
   {
     id: "classification",
     title: "Image Classification System",
