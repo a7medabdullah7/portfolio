@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const internships = [
   {
@@ -36,13 +37,38 @@ const internships = [
   },
 ];
 
+// ✅ UPDATED CERTIFICATES
 const certificates = [
-  "Machine Learning",
-  "Python",
-  "Robotics Programming",
-  "NLP",
-  "Deep Learning",
-  "Programming Fundamentals",
+  {
+    name: "Machine Learning",
+    link: "#",
+  },
+  {
+    name: "Python",
+    link: "#",
+  },
+  {
+    name: "Robotics Programming",
+    link: "#",
+  },
+  {
+    name: "NLP",
+    link: "#",
+  },
+  {
+    name: "Deep Learning",
+    link: "#",
+  },
+  {
+    name: "Programming Fundamentals",
+    link: "#",
+  },
+
+  // 🔥 NEW CERTIFICATE
+  {
+    name: "Improving Deep Neural Networks",
+    link: "https://coursera.org/account/accomplishments/verify/6OFE5JB0GVB2",
+  },
 ];
 
 export default function Experience() {
@@ -113,21 +139,38 @@ export default function Experience() {
               Certificates
             </h3>
 
-            <motion.ul
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex flex-wrap gap-2"
+              className="flex flex-wrap gap-3"
             >
               {certificates.map((cert) => (
-                <li
-                  key={cert}
-                  className="px-3 py-2 rounded-lg bg-dark-700 border border-white/5 text-gray-400 text-sm hover:border-accent-cyan/20 hover:text-accent-cyan transition-colors"
-                >
-                  {cert}
-                </li>
+                <div key={cert.name} className="flex flex-col items-center">
+
+                  {/* Clickable Certificate */}
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 rounded-lg bg-dark-700 border border-white/5 text-gray-400 text-sm hover:border-accent-cyan/20 hover:text-accent-cyan transition-colors"
+                  >
+                    {cert.name}
+                  </a>
+
+                  {/* 🔥 Coursera Logo only for the new certificate */}
+                  {cert.name === "Improving Deep Neural Networks" && (
+                    <Image
+                      src="/images/coursera-logo.png"
+                      alt="Coursera"
+                      width={60}
+                      height={20}
+                      className="mt-2 opacity-80"
+                    />
+                  )}
+                </div>
               ))}
-            </motion.ul>
+            </motion.div>
           </div>
         </div>
       </div>
