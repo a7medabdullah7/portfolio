@@ -37,37 +37,18 @@ const internships = [
   },
 ];
 
-// ✅ UPDATED CERTIFICATES
 const certificates = [
-  {
-    name: "Machine Learning",
-    link: "#",
-  },
-  {
-    name: "Python",
-    link: "#",
-  },
-  {
-    name: "Robotics Programming",
-    link: "#",
-  },
-  {
-    name: "NLP",
-    link: "#",
-  },
-  {
-    name: "Deep Learning",
-    link: "#",
-  },
-  {
-    name: "Programming Fundamentals",
-    link: "#",
-  },
+  { name: "Machine Learning", link: "#" },
+  { name: "Python", link: "#" },
+  { name: "Robotics Programming", link: "#" },
+  { name: "NLP", link: "#" },
+  { name: "Deep Learning", link: "#" },
+  { name: "Programming Fundamentals", link: "#" },
 
-  // 🔥 NEW CERTIFICATE
+  // 🔥 Coursera Certificate
   {
     name: "Improving Deep Neural Networks",
-    link: "https://coursera.org/account/accomplishments/verify/6OFE5JB0GVB2",
+    link: "https://www.coursera.org/account/accomplishments/verify/6OFE5JB0GVB2",
   },
 ];
 
@@ -158,12 +139,12 @@ export default function Experience() {
                     {cert.name}
                   </a>
 
-                  {/* 🔥 Coursera Logo only for the new certificate */}
+                  {/* 🔥 Coursera Logo */}
                   {cert.name === "Improving Deep Neural Networks" && (
                     <Image
-                      src="/images/coursera-logo.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Coursera_logo.png"
                       alt="Coursera"
-                      width={60}
+                      width={70}
                       height={20}
                       className="mt-2 opacity-80"
                     />
