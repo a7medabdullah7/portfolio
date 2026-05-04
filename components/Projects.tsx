@@ -77,6 +77,24 @@ const projects = [
       "https://github.com/a7medabdullah7/ai-customer-support-system",
   },
 
+  // 🔥 NEW SMART AGRICULTURE PROJECT
+  {
+    id: "smart-agriculture",
+    title: "Smart Agriculture System",
+    description:
+      "An intelligent agriculture monitoring system that leverages AI and IoT concepts to analyze environmental conditions and improve crop productivity. The system provides real-time insights for soil, weather, and plant health, enabling data-driven and sustainable farming decisions.",
+    technologies: [
+      "Python",
+      "Machine Learning",
+      "IoT",
+      "Data Analysis",
+      "Computer Vision",
+    ],
+    image: "/images/smart-agriculture.png",
+    github:
+      "https://github.com/a7medabdullah7/Smart-Agriculture-System",
+  },
+
   {
     id: "classification",
     title: "Image Classification System",
@@ -127,7 +145,7 @@ export default function Projects() {
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
               className={`rounded-2xl overflow-hidden bg-dark-800 border transition-all duration-500 ${
-                project.id === "ai-car-advisor"
+                project.id === "ai-car-advisor" || project.id === "smart-agriculture"
                   ? "border-accent-cyan/50 shadow-xl shadow-accent-cyan/30 scale-105"
                   : "border-white/5 hover:border-accent-cyan/40"
               }`}
@@ -143,7 +161,7 @@ export default function Projects() {
 
               <div className="p-6">
 
-                {project.id === "ai-car-advisor" && (
+                {(project.id === "ai-car-advisor" || project.id === "smart-agriculture") && (
                   <span className="inline-block mb-3 px-3 py-1 text-xs font-mono rounded-full bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30">
                     ⭐ Featured Project
                   </span>
