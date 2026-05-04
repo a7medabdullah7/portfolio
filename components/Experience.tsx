@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const internships = [
   {
@@ -45,7 +44,7 @@ const certificates = [
   { name: "Deep Learning", link: "#" },
   { name: "Programming Fundamentals", link: "#" },
 
-  // 🔥 Coursera Certificate
+  // ✅ Coursera Certificate
   {
     name: "Improving Deep Neural Networks",
     link: "https://www.coursera.org/account/accomplishments/verify/6OFE5JB0GVB2",
@@ -56,6 +55,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 relative">
       <div className="max-w-6xl mx-auto px-6">
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,6 +75,7 @@ export default function Experience() {
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12">
+
           {/* Internships */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">
@@ -127,32 +128,19 @@ export default function Experience() {
               className="flex flex-wrap gap-3"
             >
               {certificates.map((cert) => (
-                <div key={cert.name} className="flex flex-col items-center">
-
-                  {/* Clickable Certificate */}
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-2 rounded-lg bg-dark-700 border border-white/5 text-gray-400 text-sm hover:border-accent-cyan/20 hover:text-accent-cyan transition-colors"
-                  >
-                    {cert.name}
-                  </a>
-
-                  {/* 🔥 Coursera Logo */}
-                  {cert.name === "Improving Deep Neural Networks" && (
-                    <Image
-                      src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Coursera_logo.png"
-                      alt="Coursera"
-                      width={70}
-                      height={20}
-                      className="mt-2 opacity-80"
-                    />
-                  )}
-                </div>
+                <a
+                  key={cert.name}
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-2 rounded-lg bg-dark-700 border border-white/5 text-gray-400 text-sm hover:border-accent-cyan/20 hover:text-accent-cyan transition-colors"
+                >
+                  {cert.name}
+                </a>
               ))}
             </motion.div>
           </div>
+
         </div>
       </div>
     </section>
