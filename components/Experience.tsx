@@ -75,7 +75,8 @@ const featuredCertificates = [
   {
     name: "Digital Egypt Pioneers Program (DEPI)",
     title: "AI & Data Science – Microsoft Machine Learning Engineer",
-    organization: "Ministry of Communications and Information Technology (MCIT)",
+    organization:
+      "Ministry of Communications and Information Technology (MCIT)",
     date: "November 2025 - July 2026",
     image: "/images/depi-certificate.png",
   },
@@ -188,7 +189,7 @@ export default function Experience() {
                       className="w-full h-48 object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
                     />
 
-                    {/* Overlay */}
+                    {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                       <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2 rounded-lg bg-black/70 text-white text-sm font-medium">
                         View Certificate
@@ -227,7 +228,7 @@ export default function Experience() {
             {/* Other Certificates */}
             <motion.div
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="flex flex-wrap gap-3"
             >
